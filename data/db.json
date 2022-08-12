@@ -1,0 +1,10 @@
+{
+  "solutions": [
+    {"word": "ninja", "id": 1},
+    {"id": 2, "word": "avion"},
+    {"id": 3, "word": "penal"},
+    {"id": 4, "word": "venal"},
+    {"id": 5, "word": "revue"},
+    {"id": 6, "word": "mures"}
+  ]
+}
