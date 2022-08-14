@@ -92,7 +92,6 @@ const useWordle = (solution) => {
         }
       })
 
-      console.log("newkeys", newKeys)
       return newKeys
     })
     setCurrentGuess('')
@@ -106,17 +105,17 @@ const useWordle = (solution) => {
     if (key === 'Enter') {
       // only add guess if turn < 5
       if (turn > 5) {
-        console.log("you have used all your guesses")
+        console.log("Tu as utilisé tous tes essais")
         return
       }
       // only if it has not been submitted previously (check the history)
       if (history.includes(currentGuess)) {
-        console.log("You have already tried that word")
+        console.log("Tu as déjà essayé ce mot")
         return
       }
       // the word should be 5 characters long
       if (currentGuess.length !== 5) {
-        console.log("Word must be 5 chars long")
+        console.log("Le mot fait 5 charactères")
         return
       }
       // so if all tests have been passed we can call the formatGuess function
