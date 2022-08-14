@@ -128,4 +128,21 @@ h1 {
     border-radius: 6px;
     line-height: 50px;
   }
+
+
+  .green {
+    background:#5ac85a;
+    color: #eee;
+    transition: all 0.3s ease-in;
+  }
+  .yellow {
+    background:#e2cc68;
+    color: #eee;
+    transition: all 0.3s ease-in;
+  }
+  .grey {
+    background:#a1a1a1;
+    color: #eee;
+    transition: all 0.3s ease-in;
+  }
 }

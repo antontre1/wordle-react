@@ -8,7 +8,8 @@ const useWordle = (solution) => {
   // we want only 6 rows of guesses, so we set the default array at 6 values
   const [guesses, setGuesses] = useState([...Array(6)]) // each guess is an array of object
   const [history, setHistory] = useState([]) // each guess is just a string
-  const [isCorrect, SetIsCorrect] = useState(false)
+  const [isCorrect, setIsCorrect] = useState(false)
+  const [usedKeys, setUsedKeys] = useState({})
 
 
   // format a guess
@@ -53,9 +54,13 @@ const useWordle = (solution) => {
   // update isCorrect state if the guess is correct
   // add one to the turn state
 
+  // also prepare the keyboard and highlight keys with the right color
+
+  // please note that we pass guessFormatted as parameter, which is a guess formatted by
+  // the function formatGuess()
   const addNewGuess = (guessFormatted) => {
     if (currentGuess === solution) {
-      SetIsCorrect(true)
+    setIsCorrect(true)
     }
     // here we add the guess to the list of guesses (max 6)
     setGuesses((prevGuesses) => {
@@ -68,6 +73,27 @@ const useWordle = (solution) => {
     })
     setTurn((prevTurn) => {
       return prevTurn + 1
+    })
+    setUsedKeys((prevUsedKeys) => {
+      let newKeys = {...prevUsedKeys}
+      guessFormatted.forEach((l) => {
+        const currentColor = newKeys[l.key]
+        if(l.color == 'green') {
+          newKeys[l.key] = 'green'
+          return
+        }
+        if(l.color == 'yellow'&& currentColor != 'green') {
+          newKeys[l.key] = 'yellow'
+          return
+        }
+        if(l.color == 'grey'&& currentColor != 'green' && currentColor != 'yellow') {
+          newKeys[l.key] = 'grey'
+          return
+        }
+      })
+
+      console.log("newkeys", newKeys)
+      return newKeys
     })
     setCurrentGuess('')
   }
@@ -118,7 +144,7 @@ const useWordle = (solution) => {
   }
 
 
-  return {turn, currentGuess, guesses, handleKeyup, isCorrect}
+  return {turn, currentGuess, guesses, usedKeys, handleKeyup, isCorrect}
 
 }
 
