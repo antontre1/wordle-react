@@ -47,6 +47,11 @@
     {"id": 17, "word": "bombe"},
     {"id": 18, "word": "poete"},
     {"id": 19, "word": "bidon"},
-    {"id": 20, "word": "beton"}
+    {"id": 20, "word": "beton"},
+    {"id": 21, "word": "lampe"},
+    {"id": 22, "word": "chais"},
+    {"id": 23, "word": "livre"},
+    {"id": 24, "word": "verre"},
+    {"id": 25, "word": "savon"}
   ]
 }
