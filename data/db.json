@@ -44,7 +44,7 @@
     {"id": 14, "word": "terre"},
     {"id": 15, "word": "bonus"},
     {"id": 16, "word": "bombe"},
-    {"id": 17, "word": "bombe"},
+    {"id": 17, "word": "babar"},
     {"id": 18, "word": "poete"},
     {"id": 19, "word": "bidon"},
     {"id": 20, "word": "beton"},
@@ -52,6 +52,16 @@
     {"id": 22, "word": "chais"},
     {"id": 23, "word": "livre"},
     {"id": 24, "word": "verre"},
-    {"id": 25, "word": "savon"}
+    {"id": 25, "word": "savon"},
+    {"id": 26, "word": "reine"},
+    {"id": 27, "word": "litre"},
+    {"id": 28, "word": "ecran"},
+    {"id": 29, "word": "ambre"},
+    {"id": 30, "word": "peach"},
+    {"id": 31, "word": "chien"},
+    {"id": 32, "word": "bonne"},
+    {"id": 32, "word": "biere"}
+
+
   ]
 }
